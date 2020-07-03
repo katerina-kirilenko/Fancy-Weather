@@ -1,0 +1,129 @@
+.control-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4rem 0;
+}
+
+.settings-buttons {
+  display: flex;
+  margin-left: 6vw;
+  margin-right: 2rem;
+}
+
+.button-update {
+  background: rgba(180, 184, 187, 0.7) url(../../img/update-button.svg)
+    no-repeat bottom;
+  background-size: 4.4rem;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  background: url(../../img/spinner.svg) 50% no-repeat;
+  animation: spin 1.4s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  80% {
+    transform: rotate(400deg);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.language-bar,
+.degrees {
+  display: flex;
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background: rgba(76, 82, 85, 0.7);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.language-item,
+.degree-item {
+  background: transparent;
+}
+
+#en {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#ru {
+  border-radius: 0;
+}
+
+#be {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#fahrenheit {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#celsius {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.search-block {
+  position: relative;
+  display: flex;
+  margin-right: 6vw;
+  margin-left: 2rem;
+}
+
+.search-input {
+  width: 27.4rem;
+  height: 4.4rem;
+  border: 0.1rem solid rgba(76, 82, 85);
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 1.3rem 1.5rem;
+  background: rgba(76, 82, 85, 0.7);
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.search-input:required {
+  outline: 0;
+}
+
+.search-input::placeholder {
+  font-size: 1.6rem;
+  color: #fff;
+  opacity: 1;
+}
+
+.search-input:focus::placeholder {
+  opacity: 0;
+}
+
+.search-btn {
+  width: 10rem;
+  margin-left: 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: rgba(180, 184, 187, 0.7);
+}
+
+@media (max-width: 42em) {
+  .control-panel {
+    justify-content: center;
+  }
+  
+  .settings-buttons {
+    margin: 0 5rem;
+  }
+
+  .search-block {
+    margin: 4rem 5rem 0;
+  }
+}

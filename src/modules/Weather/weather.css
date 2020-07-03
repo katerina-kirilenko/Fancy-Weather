@@ -1,0 +1,157 @@
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3vw 6vw 1vw;
+}
+
+.weather-wrap {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  max-width: 65%;
+}
+
+.weather-today {
+  display: flex;
+}
+
+.weather-location {
+  font-size: 4.4rem;
+}
+
+.weather-date-time {
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+#date,
+#clock {
+  display: inline-block;
+}
+
+.weather-temperature-today {
+  font-size: 18.6rem;
+  margin-right: 4rem;
+  line-height: 20.6rem;
+  min-width: 47%;
+}
+
+.degree-icon {
+  font-size: 9.6rem;
+  vertical-align: super;
+}
+
+.weather-icon {
+  width: 17rem;
+  height: 17rem;
+}
+
+.weather-description {
+  display: flex;
+  flex-direction: column;
+  text-transform: none;
+  line-height: 3.4rem;
+  margin-right: 2vw;
+}
+
+.weather-description p {
+  word-break: break-word;
+  text-transform: uppercase;
+}
+
+.weather-description .degree-icon {
+  font-size: 2.2rem;
+  vertical-align: initial;
+}
+
+.weather-three-days {
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw 0;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: rgb(0, 0, 0, 0.2);
+}
+
+.forecast-temperature {
+  font-size: 4.6rem;
+}
+.forecast-temperature span {
+  font-size: 2.6rem;
+  vertical-align: super;
+}
+
+.forecast-icon {
+  width: 7.7rem;
+  height: 7.7rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .weather-wrap {
+    max-width: 100%;
+  }
+  .weather-today {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 67em) {
+  main {
+    justify-content: center;
+  }
+  .weather-location,
+  .weather-date-time {
+    text-align: center;
+  }
+}
+
+@media (max-width: 37em) {
+  .weather-today,
+  .weather-three-days,
+  .forecast {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .weather-temperature-today {
+    margin-right: 0;
+  }
+  .forecast {
+    margin: 2rem 0;
+  }
+  .weather-icon,
+  .forecast-icon {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .weather-location {
+    font-size: 3.4rem;
+  }
+  .weather-temperature-today {
+    line-height: 12.6rem;
+  }
+  .degree-icon {
+    font-size: 3.4rem;
+  }
+  .degree-t {
+    font-size: 10.6rem;
+  }
+  .weather-description .degree-t {
+    font-size: 2.4rem;
+  }
+}
